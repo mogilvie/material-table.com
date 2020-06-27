@@ -26,6 +26,7 @@ import MaterialTable from 'material-table';
 
 * You can change export file name by setting `options.exportFileName`
 * You can change csv delimeter by setting `options.exportDelimiter`
+* You can customise the export of individual columns by adding a `customExport` callback function
 
 ## Examples
 
@@ -44,10 +45,17 @@ import MaterialTable from 'material-table';
 />
 
 <LiveCode
+    code={require('!!raw-loader!./overriding-custom-export-function.js').default}
+    scope={{ MaterialTable }}
+    title="Overriding with CustomExport field example"
+    description="Export function of individual columns can be customised with a field marked customExport"
+/>
+
+<LiveCode
     code={require('!!raw-loader!./overriding-export-function.js').default}
     scope={{ MaterialTable }}
     title="Overriding Export Function Example"
-    description="Export function of table can be override by setting options.exportCsv"
+    description="Export function of an entire table can be override by setting options.exportCsv"
 />
 
 
