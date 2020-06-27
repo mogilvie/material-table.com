@@ -1,4 +1,4 @@
-function OverridingCustomExportFunction() {
+function CustomExportFunction() {
   return (
     <MaterialTable
       title="Overriding Export Function Preview"
